@@ -1,0 +1,65 @@
+---
+import Button from '../common/Button.astro';
+
+const blogPosts = [
+  {
+    title: "Como o SEO pode alavancar seu negócio em 2025",
+    excerpt: "Descubra as últimas tendências em otimização para mecanismos de busca e como aplicá-las na sua estratégia digital.",
+    date: "15 Mar 2025",
+    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    href: "https://joyful-bunny-7f7d66.netlify.app/"
+  },
+  {
+    title: "O impacto da inteligência artificial no design de websites",
+    excerpt: "Entenda como a IA está revolucionando o desenvolvimento web e criando experiências mais personalizadas para os usuários.",
+    date: "02 Mar 2025",
+    image: "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    href: "https://musical-mooncake-be0823.netlify.app/"
+  },
+  {
+    title: "Estratégias eficientes de marketing digital para pequenas empresas",
+    excerpt: "Um guia prático para empreendedores que desejam maximizar resultados com investimentos inteligentes em marketing digital.",
+    date: "25 Feb 2025",
+    image: "https://images.pexels.com/photos/7688308/pexels-photo-7688308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    href: "https://glistening-florentine-1ec8f5.netlify.app/"
+  }
+];
+---
+
+<section class="section bg-gray-50">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="section-title">Blog e Insights</h2>
+      <p class="section-subtitle">
+        Compartilhamos regularmente artigos, dicas e tendências sobre design, desenvolvimento web e marketing digital para ajudar seu negócio a crescer.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {blogPosts.map(post => (
+        <article class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-8px]" data-aos="fade-up">
+          <a href={post.href} class="block">
+            <img src={post.image} alt={post.title} class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-2">{post.date}</div>
+              <h3 class="text-xl font-semibold mb-3 line-clamp-2">{post.title}</h3>
+              <p class="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+              <span class="text-primary-600 font-medium inline-flex items-center hover:text-primary-700">
+                Ler mais
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <div class="text-center mt-12" data-aos="fade-up">
+      <Button href="https://incredible-tarsier-1fc143.netlify.app/" variant="primary">
+        Ver todos os artigos
+      </Button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+---
+import Button from '../common/Button.astro';
+---
+
+<section class="section bg-gray-50">
+  <div class="container">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <div class="w-full lg:w-1/2" data-aos="fade-right">
+        <div class="relative">
+          <img 
+            src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            alt="Fundadores da ArkiSide" 
+            class="rounded-lg shadow-xl max-w-full h-auto z-10 relative"
+          />
+          <div class="absolute w-full h-full top-4 left-4 bg-primary-200 rounded-lg -z-10"></div>
+          <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg w-48">
+            <div class="text-3xl font-bold text-primary-600 mb-1">6+</div>
+            <div class="text-gray-600">Anos no mercado</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w-full lg:w-1/2" data-aos="fade-left">
+        <h2 class="text-3xl font-bold mb-6">Conheça a <span class="text-primary-600">ArkiSide</span></h2>
+        <div class="bg-primary-600 h-1 w-20 mb-6"></div>
+        
+        <p class="text-gray-700 mb-6">
+          Fundada por <strong>Arthur Alves</strong> e <strong>Samuel Tauros</strong>, a ArkiSide nasceu da paixão por transformar ideias em soluções digitais impactantes. Com mais de 6 anos de experiência no mercado, nos especializamos em desenvolver websites de alta performance e implementar estratégias de marketing digital que geram resultados reais.
+        </p>
+        
+        <p class="text-gray-700 mb-8">
+          Nossa equipe é movida pela inovação e pelo compromisso em entregar soluções personalizadas que atendam às necessidades específicas de cada cliente. Acreditamos que um projeto digital de sucesso vai além da estética – ele precisa ser estratégico, funcional e gerar retorno sobre o investimento.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="flex items-start">
+            <div class="text-primary-600 mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Inovação</h3>
+              <p class="text-gray-600 text-sm">Sempre à frente das tendências digitais</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="text-primary-600 mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Compromisso</h3>
+              <p class="text-gray-600 text-sm">Focados em resultados mensuráveis</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="text-primary-600 mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Transparência</h3>
+              <p class="text-gray-600 text-sm">Comunicação clara em todas as etapas</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="text-primary-600 mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Parceria</h3>
+              <p class="text-gray-600 text-sm">Crescemos junto com nossos clientes</p>
+            </div>
+          </div>
+        </div>
+        
+        <Button href="/about" variant="primary">Conheça nossa história</Button>
+      </div>
+    </div>
+  </div>
+</section>

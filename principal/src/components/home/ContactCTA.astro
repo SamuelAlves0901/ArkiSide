@@ -1,0 +1,41 @@
+---
+import Button from '../common/Button.astro';
+---
+
+<section class="py-20 bg-primary-800 relative">
+  <div class="absolute inset-0 bg-pattern opacity-10"></div>
+  
+  <div class="container relative z-10">
+    <div class="max-w-4xl mx-auto text-center text-white" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Pronto para transformar sua presença digital?</h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Entre em contato conosco hoje mesmo para uma consultoria gratuita e descubra como podemos ajudar seu negócio a se destacar no ambiente online.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <Button 
+          variant="primary" 
+          href="/contact" 
+          class="bg-white text-primary-700 hover:bg-gray-100"
+        >
+          Solicitar orçamento
+        </Button>
+        <Button 
+          variant="outline" 
+          href="tel:+551199999999"
+          class="text-white border-white hover:bg-white/10"
+        >
+          <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Fale conosco
+        </Button>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .bg-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
+</section>

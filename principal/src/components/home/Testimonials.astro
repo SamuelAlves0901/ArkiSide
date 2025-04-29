@@ -1,0 +1,46 @@
+---
+import TestimonialCard from '../common/TestimonialCard.astro';
+
+const testimonials = [
+  {
+    quote: "A ArkiSide transformou completamente nossa presença online. Com um novo site e estratégia de SEO, aumentamos em 70% nossas conversões em apenas três meses.",
+    author: "Mariana Silva",
+    company: "CEO da Lumina Cosméticos",
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    quote: "Arthur e Samuel são profissionais excepcionais. A consultoria em marketing digital que nos ofereceram foi fundamental para expandirmos nosso alcance nacional.",
+    author: "Ricardo Mendes",
+    company: "Diretor da TechFusion",
+    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    quote: "O que mais me impressionou foi o comprometimento com resultados. A equipe da ArkiSide não apenas entregou um site incrível, mas continuou otimizando para maximizar as conversões.",
+    author: "Carla Rodrigues",
+    company: "Fundadora da Eco Ventures",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+];
+---
+
+<section class="section bg-gray-50">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="section-title">O que nossos clientes dizem</h2>
+      <p class="section-subtitle">
+        Nossa maior satisfação é ver nossos clientes alcançarem seus objetivos. Confira algumas histórias de sucesso de quem confiou em nosso trabalho.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <TestimonialCard
+          quote={testimonial.quote}
+          author={testimonial.author}
+          company={testimonial.company}
+          image={testimonial.image}
+        />
+      ))}
+    </div>
+  </div>
+</section>

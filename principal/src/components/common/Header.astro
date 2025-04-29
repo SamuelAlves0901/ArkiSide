@@ -1,0 +1,90 @@
+---
+const navItems = [
+  { name: 'Início', href: '/' },
+  { name: 'Sobre', href: '/about' },
+  { name: 'Serviços', href: 'https://poetic-fenglisu-a9bb0a.netlify.app/' },
+  { name: 'Portfólio', href: 'https://kaleidoscopic-truffle-198a28.netlify.app/' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contato', href: '/contact' },
+];
+---
+
+<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+  <div class="container flex items-center justify-between py-4">
+    <a href="/" class="flex items-center space-x-2">
+      <span class="text-2xl font-heading font-bold text-primary-700">Arki<span class="text-secondary-600">Side</span></span>
+    </a>
+
+    <!-- Mobile menu button -->
+    <button id="menu-toggle" class="md:hidden flex items-center text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex items-center space-x-8">
+      {navItems.map(item => (
+        <a 
+          href={item.href} 
+          class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300"
+        >
+          {item.name}
+        </a>
+      ))}
+      <a href="/contact" class="btn-primary">
+        Fale Conosco
+      </a>
+    </nav>
+
+    <!-- Mobile navigation -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden flex-col pt-20 px-6 md:hidden">
+      <button id="close-menu" class="absolute top-4 right-4 text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="flex flex-col space-y-6">
+        {navItems.map(item => (
+          <a 
+            href={item.href} 
+            class="text-xl text-gray-800 font-medium py-2 border-b border-gray-100"
+          >
+            {item.name}
+          </a>
+        ))}
+        <a href="/contact" class="btn-primary text-center mt-4">
+          Fale Conosco
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.replace('hidden', 'flex');
+    document.body.classList.add('overflow-hidden');
+  });
+
+  closeMenu?.addEventListener('click', () => {
+    mobileMenu?.classList.replace('flex', 'hidden');
+    document.body.classList.remove('overflow-hidden');
+  });
+
+  // Shrink header on scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('py-2');
+      header?.classList.remove('py-4');
+    } else {
+      header?.classList.add('py-4');
+      header?.classList.remove('py-2');
+    }
+  });
+</script>
